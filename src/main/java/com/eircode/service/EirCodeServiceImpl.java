@@ -11,17 +11,17 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.eircode.model.Address;
-import com.eircode.proxy.EriProxyImpl;
+import com.eircode.proxy.EirProxyImpl;
 import com.eircode.repository.CacheRepository;
 import com.eircode.util.JsonUtil;
 
 @Service
-public class EriCodeServiceImpl implements EriCodeService {
+public class EirCodeServiceImpl implements EirCodeService {
 	
-    private static final Logger log = LoggerFactory.getLogger(EriCodeServiceImpl.class);
+    private static final Logger log = LoggerFactory.getLogger(EirCodeServiceImpl.class);
 	
 	@Autowired
-	private EriProxyImpl eriProxy;
+	private EirProxyImpl eriProxy;
 	
 	@Autowired
 	private CacheRepository cacheRepository;

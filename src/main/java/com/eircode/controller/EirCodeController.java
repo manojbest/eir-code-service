@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eircode.exception.ValidationException;
 import com.eircode.model.Address;
-import com.eircode.service.EriCodeServiceImpl;
+import com.eircode.service.EirCodeServiceImpl;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -24,10 +24,10 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("/api/v1/postcoder")
 @Api(value = "Eri Code Service", produces = MediaType.APPLICATION_JSON_VALUE)
-public class EriCodeController {
+public class EirCodeController {
 	
 	@Autowired
-	private EriCodeServiceImpl eriCodeService;
+	private EirCodeServiceImpl eriCodeService;
 	
 	@RequestMapping(value = "/address/{eircode-or-address-fragment}", method = RequestMethod.GET)
 	@ApiImplicitParams({

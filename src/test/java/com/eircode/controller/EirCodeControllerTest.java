@@ -18,17 +18,17 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.eircode.AbstractControllerTest;
-import com.eircode.controller.EriCodeController;
+import com.eircode.controller.EirCodeController;
 import com.eircode.model.Address;
-import com.eircode.service.EriCodeServiceImpl;
+import com.eircode.service.EirCodeServiceImpl;
 
-public class EriCodeControllerTest extends AbstractControllerTest {
+public class EirCodeControllerTest extends AbstractControllerTest {
 	
 	@Mock
-	private EriCodeServiceImpl eriCodeService;
+	private EirCodeServiceImpl eriCodeService;
 	
 	@InjectMocks
-	private EriCodeController eriCodeController;
+	private EirCodeController eriCodeController;
 	
 	@Before
 	public void setUp() {

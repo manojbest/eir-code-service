@@ -9,9 +9,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 @EnableSwagger2
 @EnableDiscoveryClient
-public class EriCodeServiceApplication {
+public class EirCodeServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EriCodeServiceApplication.class, args);
+		SpringApplication.run(EirCodeServiceApplication.class, args);
 	}
 }

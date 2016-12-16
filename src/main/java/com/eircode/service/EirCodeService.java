@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.eircode.model.Address;
 
-public interface EriCodeService {
+public interface EirCodeService {
 	
 	List<Address> retrieveAddress(String addressFragment);
 
