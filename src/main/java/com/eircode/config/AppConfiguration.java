@@ -13,7 +13,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
-public class AppConfigurations {
+public class AppConfiguration {
 
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
@@ -27,7 +27,7 @@ public class AppConfigurations {
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("Eri Code Service with Swagger")
+		return new ApiInfoBuilder().title("Eir Code Service with Swagger")
 				.description("Irish post code service with Swagger")
 				.termsOfServiceUrl("http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm?Open")
 				.contact("Manoj Bandara").license("Apache License Version 2.0")

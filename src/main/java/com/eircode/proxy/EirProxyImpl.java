@@ -49,14 +49,14 @@ public class EirProxyImpl implements EirProxy {
 	@Override
 	public String findCoordinatesForAddress(final String addressFragment) {
 		log.info("Requesting coordinates for address from postcoder web service ...");		
-		return getRemoteServiceResults(geoAddressLookupUri.replace("{address-fragment}", addressFragment));
+		return getRemoteServiceResults(coordinateLookupUri.replace("{address-fragment}", addressFragment));
 	}
 
 	@Override
 	public String findAddressFromCoordinates(final String latitude, final String longitude, final String distance) {
-		log.info("Requesting address for coordinatesfrom postcoder web service ...");		
-		return getRemoteServiceResults(geoAddressLookupUri.replace("{latitude}", latitude)
-				.replace("{latitude}", longitude).replace("{distance}", distance));
+		log.info("Requesting address for coordinatesfrom postcoder web service ...");	
+		return getRemoteServiceResults(reverseAddressLookupUri.replace("{latitude}", latitude)
+				.replace("{longitude}", longitude).replace("{distance}", distance));
 	}
 
 }

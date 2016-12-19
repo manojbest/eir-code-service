@@ -1,7 +1,11 @@
 package com.eircode.util;
 
-import org.codehaus.jackson.map.ObjectMapper;
 import java.io.File;
+import java.io.IOException;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
+import com.eircode.exception.InvalidJSONException;
 
 
 public final class JsonUtil {
@@ -10,12 +14,23 @@ public final class JsonUtil {
 		
 	}
 
-	public static <T> T loadJsonFromFile(final File file, final Class<T> valueType) throws Exception {		
-		return new ObjectMapper().readValue(file,valueType);
+	public static <T> T loadJsonFromFile(final File file, final Class<T> valueType) throws InvalidJSONException {
+		T t = null;
+		try {
+			t = new ObjectMapper().readValue(file,valueType);
+		} catch (IOException ex) {
+			throw new InvalidJSONException("Could not parse JSON content", ex);
+		}
+		return t;
 	}
 	
-	public static <T> T loadJsonFromString(final String jsonString, final Class<T> valueType) throws Exception {		
-		return new ObjectMapper().readValue(jsonString,valueType);
+	public static <T> T loadJsonFromString(final String jsonString, final Class<T> valueType) throws InvalidJSONException {		
+		T t = null;
+		try {
+			t = new ObjectMapper().readValue(jsonString,valueType);
+		} catch (IOException ex) {
+			throw new InvalidJSONException("Could not parse JSON content", ex);
+		}
+		return t;
 	}
-	
 }

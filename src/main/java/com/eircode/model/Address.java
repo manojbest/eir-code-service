@@ -20,6 +20,8 @@ public class Address {
 	private String postcode;
 	private String number;
 	private String premise;
+	private String buildingname;
+	private String buildinggroupname;
 	
 	@JsonProperty(required = true)
 	@ApiModelProperty(notes = "Primary Address", required = true)
@@ -120,7 +122,25 @@ public class Address {
 	public void setPremise(String premise) {
 		this.premise = premise;
 	}
-	
-	
+
+	@JsonProperty(required = false)
+	@ApiModelProperty(notes = "Building Name", required = false)
+	public String getBuildingname() {
+		return buildingname;
+	}
+
+	public void setBuildingname(String buildingname) {
+		this.buildingname = buildingname;
+	}
+
+	@JsonProperty(required = false)
+	@ApiModelProperty(notes = "Building Group Name", required = false)
+	public String getBuildinggroupname() {
+		return buildinggroupname;
+	}
+
+	public void setBuildinggroupname(String buildinggroupname) {
+		this.buildinggroupname = buildinggroupname;
+	}
 	
 }
