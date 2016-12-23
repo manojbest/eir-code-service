@@ -57,7 +57,7 @@ public class EirCodeController {
 		if ("".equalsIgnoreCase(inputValue)) {
 			throw new ValidationException("No Address or Eir Code defined");
 		}
-		final List<GeoAddress> geoAdderssList = eriCodeService.retrieveAddressWithGeoIfo(inputValue);
+		final List<GeoAddress> geoAdderssList = eriCodeService.retrieveAddressWithGeoInfo(inputValue);
 		return new ResponseEntity<List<GeoAddress>>(geoAdderssList, HttpStatus.OK);
 	}
 

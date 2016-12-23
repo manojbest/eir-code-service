@@ -80,7 +80,7 @@ public class EirCodeServiceImpl implements EirCodeService {
 	}
 
 	@Override
-	public List<GeoAddress> retrieveAddressWithGeoIfo(final String addressFragment) throws BusinessException {
+	public List<GeoAddress> retrieveAddressWithGeoInfo(final String addressFragment) throws BusinessException {
 		log.info("Retrieving Geo address details for ::  " + addressFragment);
 		
 		List<GeoAddress> geoAddressList = null;

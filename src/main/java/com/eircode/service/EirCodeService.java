@@ -11,7 +11,7 @@ public interface EirCodeService {
 	
 	List<Address> retrieveAddress(String addressFragment) throws BusinessException;
 	
-	List<GeoAddress> retrieveAddressWithGeoIfo(String addressFragment) throws BusinessException;
+	List<GeoAddress> retrieveAddressWithGeoInfo(String addressFragment) throws BusinessException;
 	
 	List<Coordinate> retrieveCoordinatesForAddress(String addressFragment) throws BusinessException;
 	
