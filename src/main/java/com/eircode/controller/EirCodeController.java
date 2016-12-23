@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/api/v1/postcoder")
+@RequestMapping("/api/v1/eir/postcoder")
 @Api(value = "Eri Code Service", produces = MediaType.APPLICATION_JSON_VALUE)
 public class EirCodeController {
 
