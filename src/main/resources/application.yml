@@ -1,6 +1,13 @@
 server:
   port: 8081
 
+spring:
+    application:
+        isProd: true
+    redis:
+        host: redis
+        port: 6379
+
 eureka:
   client:
     enabled: true
@@ -50,12 +57,6 @@ mock:
             lookup:
                 path: mock-responses/reverse-address-lookup.json
 
-spring:
-    application:
-        isProd: true
-        name: eri-code-service
-    redis:
-        host: localhost
-        port: 6379
+
 
       
