@@ -1,0 +1,61 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+ribbon:
+  eureka:
+    enabled: true
+    
+eir:
+    code:
+        service:
+            address:
+                lookup:
+                    uri: http://ws.postcoder.com/pcw/PCW45-12345-12345-1234X/address/ie/{address-fragment}?lines=3&format=json
+            coordinate:
+                lookup:
+                    uri: http://ws.postcoder.com/pcw/PCW45-12345-12345-1234X/position/ie/{address-fragment}?format=json
+            geo:
+                address:
+                    lookup:
+                        uri: http://ws.postcoder.com/pcw/PCW45-12345-12345-1234X/addressgeo/ie/{address-fragment}?format=json
+            reverse:
+                address:
+                    lookup:
+                        uri: http://ws.postcoder.com/pcw/PCW45-12345-12345-1234X/rgeo/ie/{latitude}/{longitude}?distance={distance}&format=json
+
+logging:
+    file: /home/manojbandara/Documents/Task/log/eirApp.log
+    
+mock:
+    address:
+        lookup:
+            path: mock-responses/address-lookup.json
+    coordinate:
+        lookup:
+            path: mock-responses/coordinate-lookup.json
+    geo:
+        address:
+            lookup:
+                path: mock-responses/geo-address-lookup.json
+    reverse:
+        address:
+            lookup:
+                path: mock-responses/reverse-address-lookup.json
+
+spring:
+    application:
+        isProd: true
+        name: eri-code-service
+    redis:
+        host: localhost
+        port: 6379
+
+      

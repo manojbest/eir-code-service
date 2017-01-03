@@ -48,7 +48,7 @@ public class EirCodeControllerTest extends AbstractControllerTest {
 		when(eriCodeService.retrieveAddress("12")).thenReturn(addressList);
 		
 	       // Perform the behavior being tested
-        final MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/api/v1/postcoder/address/12").accept(MediaType.APPLICATION_JSON)).andReturn();
+        final MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/api/v1/eir/postcoder/address/12").accept(MediaType.APPLICATION_JSON)).andReturn();
 
         // Extract the response status and body
         final String content = result.getResponse().getContentAsString();
