@@ -13,4 +13,6 @@ $ mvn package
 
 Run application form http://localhost:8081
 
+Get unit tests reports from eir-code-service/target/site/jacoco/index.html
+
 Get Swagger documentation from http://localhost:8081/docs
